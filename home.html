@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home-decor.css" />
+    <title>Climatrix</title>
+  </head>
+  <body class="bg-center bg-cover bg-no-repeat min-h-screen w-full flex flex-col gap-5 items-center justify-start p-10">
+    <!-- Title --> 
+    <div class="w-fit flex items-center">
+      <h1 class="font-bold text-5xl" style="color: #fff89c;">Climatrix</h1>
+      <img src="./images/116.png" alt="logo" class="w-14 h-14 ml-2" />
+    </div>
+
+    <!-- 🔍 City Search -->
+    <form method="get" id="form" class="flex w-4/5 md:w-3/5 lg:w-[35%] items-center justify-center gap-2">
+      <input
+        type="text"
+        name="city"
+        id="town"
+        placeholder="Enter a city..."
+        required
+        class="py-2 px-3 w-full rounded-full bg-white text-white text-lg outline outline-2 backdrop-blur-lg ease-in-out duration-300 outline-white/70 focus:bg-white/20"
+      />
+      <button type="submit">
+        <ion-icon class="text-white font-black text-2xl p-3 bg-white/50 rounded-full" name="search"></ion-icon>
+      </button>
+    </form>
+
+    <!-- 🌡️ Home City Card -->
+    <div class="glassy-container p-5 w-4/5 justify-between flex rounded-3xl cursor-pointer transform ease-in-out md:w-3/5 lg:w-[35%] hover:scale-[105%]">
+      <div class="flex flex-col">
+        <div class="mb-6">
+          <p id="temperature-main" class="font-bold text-5xl text-white">24°C</p>
+          <p class="font-semibold text-md text-white">Now</p>
+        </div>
+        <p class="font-semibold text-xl text-white">
+          <span id="city">London</span>, <span id="country">UK</span>
+        </p>
+      </div>
+      <div class="flex justify-end items-center">
+        <img class="w-28 h-28" src="./images/113.png" alt="weather icon" />
+      </div>
+    </div>
+
+    <!-- 🧾 Weather Details -->
+    <div class="glassy-container flex w-full justify-between p-3 rounded-xl md:w-3/5 lg:w-[35%]">
+      <div class="flex flex-col justify-start">
+        <img id="icon" src="./images/116.png" alt="weather icon" />
+        <p id="weather" class="font-bold text-4xl text-white">Sunny</p>
+        <p id="weather-description" class="font-semibold text-white">clear sky</p>
+      </div>
+      <div class="w-1/2 flex-col space-y-2">
+        <div class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6">
+          <ion-icon class="w-8 h-8 text-white" name="thermometer"></ion-icon>
+          <div>
+            <p id="temperature" class="font-bold text-2xl text-right text-[#ff5a00]">26.08 °C</p>
+            <p class="text-sm text-white text-right">Temperature</p>
+          </div>
+        </div>
+        <div class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6">
+          <ion-icon class="w-8 h-8 text-white" name="speedometer"></ion-icon>
+          <div>
+            <p id="wind-speed" class="font-bold text-2xl text-[#ff5a00] text-right">1.18 m/s</p>
+            <p class="text-sm text-white text-right">Wind</p>
+          </div>
+        </div>
+        <div class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6">
+          <ion-icon class="w-8 h-8 text-white" name="rainy"></ion-icon>
+          <div>
+            <p id="humidity" class="font-bold text-2xl text-[#ff5a00] text-right">89%</p>
+            <p class="text-sm text-white text-right">Humidity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌟 Weather Message -->
+    <div id="weather-message" class="text-white text-xl font-semibold p-4 rounded-xl mt-6 shadow-md w-4/5 md:w-3/5 lg:w-[35%] bg-gradient-to-r from-yellow-500/60 to-pink-500/60 backdrop-blur-md text-center hidden">
+      <!-- Message will appear here -->
+    </div>
+
+    <!-- 🗓️ Forecast Section -->
+    <h2 class="text-4xl font-bold mt-10" style="color: #facc15;">5-Day Forecast</h2>
+    <div id="forecast" class="flex flex-wrap justify-center gap-4 mt-4 md:w-4/5 lg:w-[70%]">
+      <!-- Forecast cards will be injected here -->
+    </div>
+    <div class="w-full h-100"></div>
+
+    <!-- ➕ Additional Info Section -->
+    <div style="margin-left: 1rem; background-color: #1a0353; border-top-left-radius: 100px; border-bottom-right-radius: 100px; padding: 2rem; margin-top: 4rem; color: white; width: calc(100% - 1rem);" class="text-xl flex flex-col items-center gap-6 slide-container">
+      <div class="slide-in-on-scroll text-center">
+        <h2 class="font-bold text-3xl text-yellow-300">COLLEGE</h2>
+        <p class="text-lg">GOVERNMENT AUTONOMOUS COLLEGE</p>
+      </div>
+
+      <div class="slide-in-on-scroll text-center">
+        <h2 class="font-bold text-3xl text-yellow-300">DEPARTMENT</h2>
+        <p class="text-lg">COMPUTER SCIENCE YEAR-2025</p>
+      </div>
+
+      <div class="slide-in-on-scroll text-center">
+        <h2 class="font-bold text-3xl text-yellow-300">CONTACT</h2>
+        <div class="flex flex-col gap-1 text-lg mt-2">
+          <p>- subhampallai7@gmail.com</p>
+          <p>- piyushpandey5033new@gmail.com</p>
+          <p>- avinashmahananda982@gmail.com</p>
+          <p>- subhammallick835@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="slide-in-on-scroll text-center">
+        <h2 class="font-bold text-2xl text-yellow-300">MORE</h2>
+        <p class="text-lg">PRINCIPALGACR@GMAIL.COM</p>
+      </div>
+
+      <div class="slide-in-on-scroll text-center">
+        <h2 class="text-yellow-200 text-3xl font-extrabold mt-10">THANK YOU!</h2>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

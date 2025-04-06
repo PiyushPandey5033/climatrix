@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Climatrix</title>
+    <link rel="stylesheet" href="welcome.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #1e0c5b, #3e1f91);
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .logo-container {
+        background-color: white;
+        border-radius: 50%;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        margin-bottom: 2rem;
+        width: 150px;
+        height: 150px;
+      }
+
+      .logo-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .welcome-container {
+        text-align: center;
+        color: white;
+      }
+
+      .welcome-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .highlight {
+        color: #ffea00;
+      }
+
+      .welcome-subtext {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .get-started-btn {
+        background-color: #ffea00;
+        color: #1e0c5b;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 999px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .get-started-btn:hover {
+        background-color: #fff04b;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #fff04b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 🌤️ Centered Logo in White Circle -->
+    <div class="logo-container">
+      <img src="./images/hot.gif" alt="Climatrix Logo" />
+    </div>
+
+    <!-- 👋 Welcome Message -->
+    <div class="welcome-container">
+      <h1 class="welcome-title">
+        <span class="text-white">Welcome to</span> <span class="highlight">Climatrix</span>
+      </h1>
+      <p class="welcome-subtext">Your personalized weather dashboard.</p>
+      <a href="home.html" class="get-started-btn">Get Started</a>
+    </div>
+  </body>
+</html>

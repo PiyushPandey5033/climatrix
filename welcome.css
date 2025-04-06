@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4b0082, #8a2be2, #dda0dd);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    max-width: 650px;
+    width: 90%;
+    animation: fadeSlideUp 1s ease-out forwards;
+  }
+  
+  .welcome-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: float 4s ease-in-out infinite, fadeSlideUp 1s ease-out forwards;
+  }
+  
+  .highlight {
+    color: #eded17;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .welcome-subtext {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-bottom: 40px;
+    animation: floatSmall 5s ease-in-out infinite, fadeSlideUp 1.5s ease-out forwards;
+  }
+  
+  .get-started-btn {
+    background-color: #ffcc00;
+    color: #000000;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    animation: floatTiny 6s ease-in-out infinite, fadeSlideUp 2s ease-out forwards;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+  }
+  
+  .text-white {
+    color: #f1eaea;
+  }
+  
+  .highlight-yellow {
+    color: #e3d026;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Glow animation */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 8px rgba(255, 235, 59, 0.3);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 235, 59, 0.9);
+    }
+  }
+  
+  /* Floating animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes floatSmall {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
+  @keyframes floatTiny {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  

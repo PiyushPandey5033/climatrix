@@ -1,0 +1,148 @@
+/* --- Body Background: Deep Purple Gradient with Smooth Flow --- */
+body {
+  background: linear-gradient(135deg, #2e003e, #6a0572, #a83279);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Glassy Containers --- */
+.glassy-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+  .glassy-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* --- Input Box Styling --- */
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.75rem;
+  color: white;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+/* --- Forecast Cards --- */
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#forecast > div {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 90px;
+  width: 25vw;
+  max-width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#forecast > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+/* --- Forecast Header --- */
+h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  color: #fdfdff;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+/* --- Slide-In From Left Animation --- */
+.slide-in-on-scroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .glassy-container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  #forecast > div {
+    width: 30vw;
+    min-width: 80px;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  #forecast {
+    gap: 0.75rem;
+  }
+
+  #forecast > div {
+    width: 40vw;
+    min-width: 70px;
+  }
+}
